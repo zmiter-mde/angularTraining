@@ -12,6 +12,9 @@ export class ServersComponent implements OnInit {
   serverName : string = '';
   username : string = 'Username';
 
+  clicks: number = 0;
+  logs: number[] = [];
+
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
@@ -32,6 +35,10 @@ export class ServersComponent implements OnInit {
   onUpdateServerName(event: any) {
     console.log(event);
     this.serverName = (<HTMLInputElement>event.target).value;
+  }
+
+  logToggleState() {
+    this.logs.push(++this.clicks);
   }
 
 }

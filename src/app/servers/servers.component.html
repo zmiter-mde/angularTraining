@@ -20,3 +20,11 @@
         class="btn btn-primary">
         Reset username
 </button>
+<br/>
+<hr/>
+
+<input type="checkbox" (click)="logToggleState()"/>
+<p *ngIf="clicks % 2 === 0">Secret paragraph</p>
+<p *ngFor="let log of logs"
+   [ngStyle]="{backgroundColor: log > 4 ? 'blue': 'white'}"
+   [ngClass]="{whiteText: log > 4}">clicked!</p>
