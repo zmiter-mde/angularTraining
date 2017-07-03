@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="xs-col-12">
+        <table class="table">
+          <tbody>
+            <tr>
+              <td>Open price</td>
+              <td><input type="text" [(ngModel)]="openPrice"></td>
+            </tr>
+            <tr>
+              <td>Margin</td>
+              <td><input type="text" [(ngModel)]="margin"></td>
+            </tr>
+            <tr>
+              <td>Investment</td>
+              <td><input type="text" [(ngModel)]="investment"></td>
+            </tr>
+            <tr>
+              <td>Tax</td>
+              <td><input type="text" [(ngModel)]="tax"></td>
+            </tr>
+            <tr>
+              <td>Close price &lt;</td>
+              <td><span>{{ getClosePrice() }}</span></td>
+            </tr>
+            <tr>
+              <td>Close price</td>
+              <td><input type="text" [(ngModel)]="curClosePrice"></td>
+            </tr>
+            <tr>
+              <td>Income</td>
+              <td><span>{{ getIncome() }}</span></td>
+            </tr>
+            <tr>
+              <td>Up/down</td>
+              <td><input type="checkbox" [(ngModel)]="raise"></td>
+            </tr>
+          </tbody>
+
+        </table>
+    </div>
+  </div>
+</div>
